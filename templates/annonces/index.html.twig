@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    Mes annonces
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1>Les annonces</h1>
+        <div class="row">
+            {% for annonce in annonces %}
+                <div class="col-md-3">
+                    <div class="card-header">
+                        {{annonce.titre}}
+                    </div>
+                    <img src={{annonce.photo}} style="height:200px; width:200px; display:block">
+                    <div class="card">
+                        <h2>super voiture</h2>
+                        <p>Loren Ipsum</p>
+                        <a class="btn btn-primary" href="https://www.wikipedia.org/">plus d'infos</a>
+                    </div>
+                </div>
+               
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
